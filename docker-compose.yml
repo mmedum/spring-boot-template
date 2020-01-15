@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  application:
+    hostname: application
+    container_name: application
+    build: .

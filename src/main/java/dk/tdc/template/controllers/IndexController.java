@@ -8,13 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class HealthController {
+public class IndexController {
 
-    @GetMapping(path = "/health")
-    public ResponseEntity<Map> getHealth(){
-        Map healthMap = new HashMap<>();
-        healthMap.put("Health", "OK");
-        return ResponseEntity.ok(healthMap);
+    @GetMapping(path="/")
+    public ResponseEntity<Map<String, String>> getHelloWorld(){
+        Map<String, String> output = new HashMap<>();
+        output.put("Hello", "World!");
+        return ResponseEntity.ok(output);
     }
-
 }

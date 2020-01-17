@@ -1,0 +1,20 @@
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins: "*"
+        allowed-methods: GET,POST,PUT,DELETE
+      base-path: /
+      exposure:
+        include: metrics,info,health,prometheus
+
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+  metrics:
+    export:
+      prometheus:
+        enabled: true
